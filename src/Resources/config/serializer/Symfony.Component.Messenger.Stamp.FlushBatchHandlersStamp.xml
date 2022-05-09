@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serializer>
+    <class name="Symfony\Component\Messenger\Stamp\FlushBatchHandlersStamp" exclusion-policy="ALL">
+        <property name="force" type="bool" expose="true" />
+    </class>
+</serializer>

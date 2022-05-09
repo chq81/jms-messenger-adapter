@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serializer>
+    <class name="Symfony\Component\Messenger\Stamp\AckStamp" exclusion-policy="ALL">
+        <property name="ack" type="Closure" expose="true" />
+    </class>
+</serializer>

@@ -2,8 +2,6 @@
 <serializer>
     <class name="Symfony\Component\Messenger\Stamp\RedeliveryStamp" exclusion-policy="ALL">
         <property name="retryCount" type="int" expose="true" />
-        <property name="exceptionMessage" type="string" expose="true" />
-        <property name="flattenException" type="Symfony\Component\ErrorHandler\Exception\FlattenException" expose="true" />
-        <property name="redeliveredAt" type="DateTimeImmutable" expose="true" />
+        <property name="redeliveredAt" type="DateTimeInterface" expose="true" />
     </class>
 </serializer>
