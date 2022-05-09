@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serializer>
+    <class name="Symfony\Component\Messenger\Stamp\NoAutoAckStamp" exclusion-policy="ALL">
+        <property name="handlerDescriptor" type="Symfony\Component\Messenger\Handler\HandlerDescriptor" expose="true" />
+    </class>
+</serializer>

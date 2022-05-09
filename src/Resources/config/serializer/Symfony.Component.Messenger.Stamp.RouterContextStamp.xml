@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serializer>
+    <class name="Symfony\Component\Messenger\Stamp\RouterContextStamp" exclusion-policy="ALL">
+        <property name="baseUrl" type="string" expose="true" />
+        <property name="method" type="string" expose="true" />
+        <property name="host" type="string" expose="true" />
+        <property name="scheme" type="string" expose="true" />
+        <property name="httpPort" type="int" expose="true" />
+        <property name="httpsPort" type="int" expose="true" />
+        <property name="pathInfo" type="string" expose="true" />
+        <property name="queryString" type="string" expose="true" />
+    </class>
+</serializer>
