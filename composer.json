@@ -26,6 +26,7 @@
     },
     "require-dev": {
         "behat/behat": "^3.10",
+        "friends-of-behat/symfony-extension": "^2.0",
         "jms/serializer-bundle": "^4.0 || ^5.4",
         "matthiasnoback/symfony-dependency-injection-test": "dev-master",
         "php-coveralls/php-coveralls": "^2.5",
