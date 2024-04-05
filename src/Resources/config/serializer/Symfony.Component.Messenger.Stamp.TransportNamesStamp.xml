@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serializer>
+    <class name="Symfony\Component\Messenger\Stamp\TransportNamesStamp" exclusion-policy="ALL">
+        <property name="transportNames" type="array" expose="true" />
+    </class>
+</serializer>
