@@ -7,6 +7,7 @@ namespace KunicMarko\JMSMessengerAdapter\Bridge\Symfony\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
+use function assert;
 
 final class Configuration implements ConfigurationInterface
 {
@@ -15,7 +16,7 @@ final class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder('jms_messenger');
         $rootNode = $treeBuilder->getRootNode();
 
-        \assert($rootNode instanceof ArrayNodeDefinition);
+        assert($rootNode instanceof ArrayNodeDefinition);
 
         $rootNode
             ->addDefaultsIfNotSet()

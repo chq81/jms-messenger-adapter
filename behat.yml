@@ -6,9 +6,11 @@ default:
             messageBus: '@message_bus'
             receiverLocator: '@messenger.receiver_locator'
   extensions:
-    Behat\Symfony2Extension:
+    FriendsOfBehat\SymfonyExtension:
+      bootstrap: ~
       kernel:
-        env: test
-        debug: true
-        path: features/Fixtures/Project/src/Kernel.php
         class: KunicMarko\JMSMessengerAdapter\Features\Fixtures\Project\Kernel
+        path: features/Fixtures/Project/src/Kernel.php
+        environment: test
+        debug: true
+

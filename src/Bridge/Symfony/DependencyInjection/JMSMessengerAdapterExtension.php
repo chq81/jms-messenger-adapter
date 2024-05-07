@@ -14,7 +14,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\ConfigurableExtension;
 
 final class JMSMessengerAdapterExtension extends ConfigurableExtension implements PrependExtensionInterface
 {
-    protected function loadInternal(array $config, ContainerBuilder $container)
+    protected function loadInternal(array $mergedConfig, ContainerBuilder $container): void
     {
         $container->setDefinition(
             Serializer::class,
@@ -22,12 +22,12 @@ final class JMSMessengerAdapterExtension extends ConfigurableExtension implement
                 Serializer::class,
                 [
                     new Reference(JMSSerializer::class),
-                    $config['format'],
+                    $mergedConfig['format'],
                 ]
             )
         );
 
-        $container->setAlias($config['serializer_id'], Serializer::class);
+        $container->setAlias($mergedConfig['serializer_id'], Serializer::class);
     }
 
     public function getAlias(): string
